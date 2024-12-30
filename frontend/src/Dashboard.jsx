@@ -2,29 +2,29 @@ import React, { useEffect, useState } from "react";
 import logo from "./logo.png";
 import search from "./search.png";
 import user from "./user.png";
-import p1 from "./p1111.jpg";
-import p2 from "./p3.png";
-import p3 from "./p4.png";
+// import p1 from "./p1111.jpg";
+// import p2 from "./p3.png";
+// import p3 from "./p4.png";
 import js from "./js.jpeg";
 import c from "./c.jpg";
 import java from "./java.jpg";
 import python from "./oython.jpg";
 
 const Dashboard = () => {
-  const ph = [p1, p2, p3];
+  // const ph = [p1, p2, p3];
 
-  const [photo, setPhoto] = useState(ph[0]);
+  // const [photo, setPhoto] = useState(ph[0]);
 
 
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setPhoto(ph[index]);
-      index = (index + 1) % ph.length;
-    }, 1000);
+  // useEffect(() => {
+  //   let index = 0;
+  //   const interval = setInterval(() => {
+  //     setPhoto(ph[index]);
+  //     index = (index + 1) % ph.length;
+  //   }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="font-classy">
