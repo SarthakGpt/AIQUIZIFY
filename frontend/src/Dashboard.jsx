@@ -16,13 +16,15 @@ const Dashboard = () => {
   const [photo, setPhoto] = useState(ph[0]);
 
 
-  setTimeout(function () {
-    if (photo == ph.length - 1) {
-      setPhoto(ph[0]);
-      return;
-    }
-    setPhoto(ph[photo]++);
-  }, 1000); // 2000 milliseconds = 2 seconds
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setPhoto(ph[index]);
+      index = (index + 1) % ph.length;
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="font-classy">
